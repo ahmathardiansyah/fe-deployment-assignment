@@ -26,10 +26,9 @@ const EditPhoto = () => {
       body: JSON.stringify(data)
     })
     .then(Response => Response.json())
-    .then(data => {
-      console.log(data);
-      navigate('/photos')
-    })
+    .then((data) => {
+      data.error ? setError(data.error) : navigate("/photos");
+    });
   };
 
   useEffect(() => {

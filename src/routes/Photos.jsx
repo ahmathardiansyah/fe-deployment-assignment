@@ -44,6 +44,7 @@ const Photos = () => {
           }
         }
         searchData();
+        break;
       case "desc":
         async function searchDataOne (){
           try{
@@ -78,7 +79,7 @@ const Photos = () => {
   useEffect(() => {
     setLoading(true);
     // TODO: answer here
-  }, []);
+  }, [submited]);
 
   if (error) return <h1 style={{ width: "100%", textAlign: "center", marginTop: "20px" }} >Error!</h1>;
 
