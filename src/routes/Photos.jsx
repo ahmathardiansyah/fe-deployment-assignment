@@ -45,7 +45,7 @@ const Photos = () => {
         }
         searchData();
         break;
-      case "desc":
+      default:
         async function searchDataOne (){
           try{
             const searchItem = await window.fetch('https://gallery-app-server.vercel.app/photos/?_sort=id&_order=desc');
